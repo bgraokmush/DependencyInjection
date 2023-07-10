@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Game>
+
+<div>
+    <h1>Tüm Oyunlar</h1>
+    <hr/>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Last Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Title</td>
+                    <td>@item.LastPrice</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a class="btn btn-dark text-white" asp-area="" asp-controller="Game" asp-action="AddGame">Games</a>
+
+</div>
